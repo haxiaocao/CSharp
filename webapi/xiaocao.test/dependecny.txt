@@ -1,0 +1,14 @@
+﻿https://stackoverflow.com/questions/608585/can-someone-explain-microsoft-unity
+
+Unity is an IoC(Inversion Of Control). The point of IoC is to abstract the wiring of dependencies between types
+outside of the types themselves. This has a couple of advantages. First of all, it is done centrally which means you don't have to change a lot of code when dependencies change (which may be the case for unit tests).
+
+Furthermore, if the wiring is done using configuration data instead of code, you can actually rewire the dependencies after deployment and thus change the behavior of the application without changing the code.
+
+Our goal is to completely get rid of this "new" keyword and make sure classes follow Single Responsibility Principle.
+
+Resolve the dependencies  To create the object which takes a dependency using the constructor or property injection we use the resolve method.
+When we use the resolve method the necessary dependencies are automatically injected.So we are not concerned with providing the dependencies 
+ourselves.We can get an object of Employee class using the Resolve() method as
+
+
