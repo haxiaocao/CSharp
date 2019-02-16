@@ -8,4 +8,10 @@
 
 3.Global.asax -> configuration/**ApiConfig.cs -> Controller/**Controller(inherit from ApiController)
 
+4.Tutorial test api:
+   http://localhost:63324/student
+
+
+
+
 reference: https://www.tutorialsteacher.com/webapi/web-api-tutorials
