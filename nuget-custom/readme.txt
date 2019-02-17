@@ -1,3 +1,6 @@
+in the project property "Build Events": G:\ReleasedProjects\nuget-custom\run_publish.bat $(ProjectDir) $(ProjectFileName) $(TargetName)
+G:\ReleasedProjects\nuget-custom\run_publish.bat $(ProjectDir) $(ProjectFileName) $(TargetName)
+
 1 modify the Project file(Version,description,and tilte): Properties->AssemblyInfo.cs 
 2 if note 1 is not enough , you can add the Nuget reference: MsBuild.NuGet.Pack,which will give you a detailed informations about the nuget dll.
   OR in the Nuget manager console: 1)cd [project]  2)nuget spec   => to get the .nuspec file 
