@@ -7,8 +7,8 @@ git {cmd} --help
 git --status  [note : 非常有用]
 
 git add {your file name}
-git rm {your deleted files, or rename files}
-git rm --cached {filename}
+git rm {your deleted files, or rename files}   
+git rm [--cached] {filename}    
 
 git commit -m {'your commit '}
 
