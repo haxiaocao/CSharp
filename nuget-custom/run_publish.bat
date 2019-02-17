@@ -1,5 +1,6 @@
 rem pass %1 and %2 arguments in the external settings:$(ProjectFileName) $(TargetName)
 rem Uset the Tools->External tool: build and package the lastest package version.
+rem It does work in the current .csproj folder , so in the external tools settings , it does not work any way(argument doesnot work).
 del nugetpack /S /Q
 rem if it is the first version ,you should create the folder to identity the Package Name.
 if not exist G:\develop_Tools\MyPackager\%~2 (mkdir G:\develop_Tools\MyPackager\%~2)
