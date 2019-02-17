@@ -1,0 +1,16 @@
+rem pass %1 and %2，%3 arguments in the external settings:$(ProjectDir) $(ProjectFileName) $(TargetName)
+rem Uset the Tools: External tool: build and package the lastest package version.
+del %~dp0nugetpack /S /Q
+rem if it is the first version ,you should create the folder to identity the Package Name.
+if not exist G:\develop_Tools\MyPackager\%~3 (mkdir G:\develop_Tools\MyPackager\%~3)
+
+echo %~1
+echo %~2
+echo %~3
+echo set the configurations
+set mylib=G:\develop_Tools\MyPackager
+%~dp0nuget.exe pack %~1%~2 -properties Configuration=Release  -OutputDirectory  %~dp0nugetpack
+%~dp0nuget.exe push %~dp0nugetpack\  -source %mylib%\%~3
+echo  Target folder: %mylib%\%~3
+
+pause

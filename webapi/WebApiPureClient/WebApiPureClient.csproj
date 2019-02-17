@@ -76,4 +76,8 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>G:\ReleasedProjects\nuget-custom\run_publish.bat $(ProjectDir) $(ProjectFileName) $(TargetName)
+</PostBuildEvent>
+  </PropertyGroup>
 </Project>
