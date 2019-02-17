@@ -1,0 +1,12 @@
+1. C# code snippet folder[Custom]
+%userprofile%\Documents\Visual Studio 2017\Code Snippets\Visual C#\My Code Snippets
+
+2. 用户项目模板
+%userprofile%\Documents\Visual Studio 2017\Templates
+
+3. vs primitive code snippets
+%vsintall%\VC#\Snippets\ 
+
+4. 导出模板的路径
+%userprofile%\Documents\Visual Studio 2017\My Exported Templates
+
