@@ -11,6 +11,7 @@
 4.Tutorial test api:
    http://localhost:63324/student
 
+5. example invocation is in project WebpureApiClient.
 
 
 
