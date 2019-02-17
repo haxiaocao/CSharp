@@ -1,0 +1,20 @@
+git --help 
+git {cmd} --help 
+
+
+
+
+git --status  [note : 非常有用]
+
+git add {your file name}
+
+git commit {'your commit '}
+
+git pull 
+
+git push [--force]
+
+git log --oneline
+git revert {versionid}
+
+
