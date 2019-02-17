@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -14,9 +15,12 @@ namespace WebApiPureClient
         {
             try
             {
-               // GetHttp();
-               //PostHttp();
-               PostHttp2(); 
+                // GetHttp();
+                //PostHttp();
+                //PostHttp2(); 
+
+                //UploadFile();
+                UploadMultipleFiles();
             }
             catch (Exception ex)
             {
@@ -25,6 +29,27 @@ namespace WebApiPureClient
 
             Console.WriteLine("测试结束....");
             Console.ReadKey();
+        }
+
+        private static void UploadMultipleFiles()
+        {
+            string url = "http://localhost:5623/FileUpload";
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Newtonsoft.Json.xml");
+            List<string> paths = new List<string>
+            {
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "files","111.txt"),
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "files","222.txt"),
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "files","333.docx"),
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "files","444.xlsx")
+            };
+            FileUploadHttp.UploadFilesToRemoteUrl(url, paths.ToArray());
+        }
+
+        private static void UploadFile()
+        {
+            string url = "http://localhost:5623/FileUpload";
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Newtonsoft.Json.xml");
+            FileUploadHttp.UploadFileToRemoteUrl(url, path);
         }
 
         private static void PostHttp2()

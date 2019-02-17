@@ -33,6 +33,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -81,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -96,6 +99,7 @@
   <ItemGroup>
     <Compile Include="ApiFilterCompletement\LogAttribute.cs" />
     <Compile Include="Configuration\HelloWebAPIConfig.cs" />
+    <Compile Include="Controller\FileUploadController.cs" />
     <Compile Include="Controller\FormattersController.cs" />
     <Compile Include="Controller\StudentController.cs" />
     <Compile Include="Controller\HelloController.cs" />
