@@ -11,6 +11,8 @@ namespace WebApiPure.Controller
     /// </summary>
     public class FormattersController: ApiController
     {
+        //[Route("api/DownloadPdfFile/{id}")]
+        //[HttpGet]
         public IEnumerable<string> Get()
         {
             IList<string> formatters = new List<string>();

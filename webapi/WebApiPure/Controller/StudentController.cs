@@ -11,6 +11,8 @@ namespace WebApiPure.Controller
     [ApiFilterCompletement.Log]
     public class StudentController : ApiController
     {
+        //[Route("api/DownloadPdfFile/{id}")]
+        //[HttpGet]
         // GET: api/student
         public IEnumerable<string> Get()
         {

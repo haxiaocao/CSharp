@@ -25,6 +25,7 @@ namespace WebApiPure.Configuration
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 //routeTemplate: "api/{controller}/{id}",  //remove api prefix is fun .
+                //Api/{controller}/{action}/{id}           //specify real method name(I think it is a better choice).
                 routeTemplate: "{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );

@@ -14,7 +14,7 @@ namespace WebApiPure.Controller
     /// </summary>
     public class FileUploadController : ApiController
     { 
-        //[Route("api/myfileupload")]  //you can custom the route 
+        //[Route("api/myfileupload")]  //you can custom the route template
         [HttpPost()]
         public string UploadFiles()
         {
@@ -28,7 +28,7 @@ namespace WebApiPure.Controller
                 Directory.CreateDirectory(uploadPath);
             }
 
-            string sPath = System.Web.Hosting.HostingEnvironment.MapPath("~/upload/");
+            string fileFolder = System.Web.Hosting.HostingEnvironment.MapPath("~/upload/");
             System.Web.HttpFileCollection hostFiles = System.Web.HttpContext.Current.Request.Files;
 
             // CHECK THE FILE COUNT.
@@ -39,10 +39,10 @@ namespace WebApiPure.Controller
                 if (postFile.ContentLength > 0)
                 {
                     // CHECK IF THE SELECTED FILE(S) ALREADY EXISTS IN FOLDER. (AVOID DUPLICATE)
-                    if (!File.Exists(sPath + Path.GetFileName(postFile.FileName)))
+                    if (!File.Exists(fileFolder + Path.GetFileName(postFile.FileName)))
                     {
                         // SAVE THE FILES IN THE FOLDER.
-                        postFile.SaveAs(sPath + Path.GetFileName(postFile.FileName));
+                        postFile.SaveAs(fileFolder + Path.GetFileName(postFile.FileName));
                         iUploadedCnt = iUploadedCnt + 1;
                     }
                 }

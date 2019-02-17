@@ -99,6 +99,7 @@
   <ItemGroup>
     <Compile Include="ApiFilterCompletement\LogAttribute.cs" />
     <Compile Include="Configuration\HelloWebAPIConfig.cs" />
+    <Compile Include="Controller\FileDownloadController.cs" />
     <Compile Include="Controller\FileUploadController.cs" />
     <Compile Include="Controller\FormattersController.cs" />
     <Compile Include="Controller\StudentController.cs" />

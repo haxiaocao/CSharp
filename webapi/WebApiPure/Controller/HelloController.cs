@@ -8,6 +8,8 @@ namespace WebApiPure.Controller
 {
     public class HelloController: ApiController
     {
+        //[Route("api/DownloadPdfFile/{id}")]
+        //[HttpGet]
         public string Get()
         {
             return "Hello World";
