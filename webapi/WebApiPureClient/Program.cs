@@ -20,7 +20,9 @@ namespace WebApiPureClient
                 //PostHttp2(); 
 
                 //UploadFile();
-                UploadMultipleFiles();
+                // UploadMultipleFiles();
+
+                DownloadFile();
             }
             catch (Exception ex)
             {
@@ -29,6 +31,14 @@ namespace WebApiPureClient
 
             Console.WriteLine("测试结束....");
             Console.ReadKey();
+        }
+
+        private static void DownloadFile()
+        {
+            string url = "http://localhost:5623/FileDownload?filename=";
+            string fileName = "硅谷S01E08.mp4";  //155MB
+            string dir = @"G:\MyCode\CSharp\webapi";
+            FileDownloadHttp.DownloadFile(url, fileName, dir);
         }
 
         private static void UploadMultipleFiles()

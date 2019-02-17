@@ -17,8 +17,10 @@ namespace WebApiPure.Controller
         //[Route("api/myfileupload")]  //you can custom the route template
         //[HttpGet()]
         /// <summary>
-        /// download 文件 
+        /// download 文件 : txt,docx,xlsx,mp4,dll均可下载；注意modify-code.pdf 在浏览器和fiddler中测试不要加引号
         /// usage example: http://localhost:63324/FileDownload?filename=modify-code.pdf
+        /// 
+        /// http://localhost:5623/upload/111.txt : 这种方式可以直接查看文档记录（不用使用这个接口）,直接打开的形式
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
